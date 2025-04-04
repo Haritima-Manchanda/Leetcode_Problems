@@ -23,8 +23,8 @@
 
 using namespace std;
 
-void move_zeroes(vector<int> &nums){
-    // Using unidirectional 2 pointers
+void move_zeroes_staged_two_pointers(vector<int> &nums){
+    // Using staged 2 pointers
 
     int left = 0;
     int temp;
@@ -40,10 +40,26 @@ void move_zeroes(vector<int> &nums){
     }
 }
 
+void move_zeroes_unidirectional_two_pointers(vector<int> &nums){
+    int left = 0;
+
+    for(int right= 0; right < nums.size(); right++){
+        if(nums[right] != 0){
+            nums[left] = nums[right];
+            left += 1;
+        }
+    }
+
+    while(left < nums.size()){
+        nums[left] = 0;
+        left +=1;
+    }
+}
+
 int main(){
 
     vector<int> nums = {0, 1, 0, 3, 12};
-    move_zeroes(nums);
+    move_zeroes_unidirectional_two_pointers(nums);
 
     cout<<"After move_zeroes, nums = ";
 
@@ -53,7 +69,7 @@ int main(){
     cout<<endl;
 
     nums = {0, 0, 1};
-    move_zeroes(nums);
+    move_zeroes_unidirectional_two_pointers(nums);
 
     cout<<"After move_zeroes, nums = ";
 
