@@ -82,6 +82,14 @@ ListNode* find_intersection_by_aligning_lengths(ListNode *headA, ListNode *headB
     }
 
     return NULL;
+
+    // Updated condition: loop until either we find the intersection, or reach end of both lists
+    // while ((currentA && currentB) && (currentA != currentB)){
+    //     currentA = currentA->next;
+    //     currentB = currentB->next;
+    // }
+
+    // return currentA;
 }
 
 ListNode* find_intersection_by_two_pointers_approach(ListNode *headA, ListNode *headB){
