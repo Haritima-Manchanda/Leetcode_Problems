@@ -1,3 +1,15 @@
+/*
+    Problem Statement: 
+        Longest Substring Without Repeating Characters
+
+        You are given a string s. Your task is to find the length of the longest substring of s that does not contain any repeating characters.
+
+        A substring is a contiguous sequence of characters within a string.
+
+        Example: s="abcdef", return 0 "abcdef"
+        s = "abcabcbb", return 3 -> "abc"
+*/
+
 #include <iostream>
 #include <string>
 #include <algorithm>
