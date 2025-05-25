@@ -39,8 +39,6 @@
 
             Explanation:
             No anagrams of "hij" appear in the string "abcdefg".
-
-
 */
 
 #include <iostream>
