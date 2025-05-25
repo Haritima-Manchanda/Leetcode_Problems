@@ -1,3 +1,48 @@
+/*
+    Problem Statement:
+        Given two strings, s and t, find the number of substrings in s that are anagrams of string t.
+
+        An anagram of a string is a rearrangement of its characters. For example, the anagrams of "abc" are "abc", "acb", "bac", "bca", "cab", and "cba".
+
+        Your task is to count how many substrings of length equal to t in s are anagrams of t.
+
+        Input:
+        A string s representing the main string.
+
+        A string t representing the target anagram string.
+
+        Output:
+        An integer representing the count of anagram substrings of t found in s.
+
+        Constraints:
+        0 <= s.length(), t.length() <= 10^5
+
+        Strings s and t consist of ASCII characters.
+
+
+        Input:
+            s = "cbaebabacd"
+            t = "abc"
+
+            Output:
+            2
+
+            Explanation:
+            The anagrams of "abc" found in s are "cba" (substring s[0..2]) and "bac" (substring s[6..8]).
+
+        Input:
+            s = "abcdefg"
+            t = "hij"
+
+            Output:
+            0
+
+            Explanation:
+            No anagrams of "hij" appear in the string "abcdefg".
+
+
+*/
+
 #include <iostream>
 #include <string>
 #include <unordered_map>
